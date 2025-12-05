@@ -1,0 +1,236 @@
+
+:root {
+    --primary-gold: #ffc107; 
+    --dark-bg: #0a0a0a;
+    --panel-bg: rgba(0, 0, 0, 0.85);
+    --text-white: #ffffff;
+    --border-radius: 15px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+
+    background-image: url('../img/fondo_casino.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-white);
+    min-height: 100vh;
+}
+
+
+.main-container {
+    border: 2px solid var(--primary-gold);
+    border-radius: var(--border-radius);
+    background-color: var(--panel-bg);
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #666;
+    border-radius: 0;
+    color: white;
+    padding-left: 0;
+}
+
+.form-control:focus {
+    background: transparent;
+    border-bottom: 2px solid var(--primary-gold);
+    box-shadow: none;
+    color: white;
+}
+
+.desplegable{
+    background-color: #000;
+}
+
+.mascot-img{
+    margin-bottom: -50px;
+}
+
+.selec{
+    color: white;
+}
+
+.btn-gold {
+    background-color: var(--primary-gold);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 10px;
+}
+
+.btn-gold:hover {
+    background-color: #e0a800;
+    color: #000;
+}
+
+.btn-outline-gold {
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    background: transparent;
+}
+
+
+.sidebar {
+    border-right: 2px solid var(--primary-gold);
+    min-height: 600px;
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: var(--primary-gold);
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+}
+
+.mascot-img {
+    max-height: 500px;
+    object-fit: contain;
+    position: relative;
+    z-index: 10;
+}
+
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+    background: var(--dark-bg);
+    border: 2px solid var(--primary-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-gold);
+    font-weight: bold;
+    z-index: 2;
+}
+
+.stepper-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.step-line {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #333;
+    z-index: 1;
+}
+
+.step-item {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: var(--panel-bg); 
+    padding: 0 10px;
+}
+
+.step-circle {
+    width: 35px;
+    height: 35px;
+    background: #000;
+    border: 2px solid #333;
+    color: #666;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 5px auto;
+    transition: all 0.3s;
+}
+
+.step-item.active .step-circle {
+    border-color: var(--primary-gold);
+    color: var(--primary-gold);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.4);
+}
+
+.step-item.active p {
+    color: var(--primary-gold);
+}
+
+.step-label {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.bonus-card {
+    border: 1px solid #444;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #111;
+}
+
+.bonus-card:hover, .bonus-card.selected {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+}
+
+.bonus-card input[type="radio"] {
+    display: none; 
+}
+
+.bonus-badge {
+    background-color: var(--primary-gold);
+    color: black;
+    font-weight: bold;
+    padding: 2px 10px;
+    border-radius: 10px 0 10px 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.8rem;
+}
+
+
+.mascot-col {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.piegrupo{
+    font-size: 10px;
+    color: white;
+    margin-top: 8px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Final - Atlantic City</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles_registro3.css">
+</head>
+<body>
+
+    <div class="container d-flex align-items-center min-vh-100">
+        <div class="main-container w-100">
+            <div class="row">
+                
+                <div class="col-lg-8 p-4">
+                    <div class="stepper-container d-flex justify-content-between">
+                        <div class="step-line"></div>
+                        <div class="step-item active">
+                            <div class="step-circle" style="background:var(--primary-gold); color:black;">✓</div>
+                            <p class="step-label">Datos</p>
+                        </div>
+                        <div class="step-item active">
+                            <div class="step-circle" style="background:var(--primary-gold); color:black;">✓</div>
+                            <p class="step-label">Domicilio</p>
+                        </div>
+                        <div class="step-item active">
+                            <div class="step-circle">3</div>
+                            <p class="step-label">Cuentas</p>
+                        </div>
+                    </div>
+
+                    <form action="dashboard.html">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label class="small text-white">Nombre de usuario (alias)</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 position-relative">
+                                <label class="small text-white">Contraseña</label>
+                                <input type="password" class="form-control" id="regPassword" required>
+                                <i class="bi bi-eye position-absolute end-0 bottom-0 mb-2 me-2 text-white" id="toggleRegPassword" style="cursor: pointer;"></i>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="small text-white">Tipo de moneda</label>
+                                <select class="form-control bg-transparent text-white border-bottom">
+                                    <option value="PEN" class="text-dark" >Soles (S/.)</option>
+                                    <option value="USD" class="text-dark">Dólares ($)</option>
+                                </select>
+                            </div>
+                             <div class="col-md-6">
+                                <label class="small text-white">Código Promocional (opcional)</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <h6 class="mt-4 text-white text-center">Elige tu bono de bienvenida:</h6>
+                        <div class="row g-3 mt-1">
+                            <div class="col-md-6">
+                                <label class="bonus-card d-flex align-items-center p-2 w-100">
+                                    <input type="radio" name="bono" value="casino" checked>
+                                    <div class="me-3">
+                                        <div class="bono_img1"><img src="/img/777.webp" alt=""></div>
+                                    </div>
+                                    <div>
+                                        <small class="text-white d-block">Te devolvemos el 100% de tu 1er depósito</small>
+                                    </div>
+                                    <div class="bonus-badge">Máquinas</div>
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="bonus-card d-flex align-items-center p-2 w-100">
+                                    <input type="radio" name="bono" value="deportes">
+                                    <div class="me-3">
+                                         <div class="bono_img2"><img src="/img/fut.png" alt=""></div>
+                                    </div>
+                                    <div>
+                                        <small class="text-white d-block">Te regalamos el 100% de tu 1er depósito</small>
+                                    </div>
+                                    <div class="bonus-badge" style="background: #4caf50; color: white;">Apuestas deportivas</div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center gap-3 mt-5">
+                            <a href="registro-paso2.html" class="btn btn-dark border px-5">ATRAS</a>
+                            <button type="submit" class="btn btn-gold px-5">CREAR CUENTA</button>
+                        </div>
+                        
+                        <div class="text-center mt-3 text-white small">
+                            Diseño y desarrollo Grupo 2 - EFSRT Capa Vista - Idat
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-lg-4 mascot-col d-none d-lg-flex">
+                    <img src="img/chica-mascota.png" alt="Mascota" class="mascot-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Script inline simple para este archivo (o ponlo en main.js)
+        const toggleRegPassword = document.querySelector('#toggleRegPassword');
+        const regPassword = document.querySelector('#regPassword');
+        
+        toggleRegPassword.addEventListener('click', function () {
+            const type = regPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            regPassword.setAttribute('type', type);
+            this.classList.toggle('bi-eye');
+            this.classList.toggle('bi-eye-slash');
+        });
+        
+        // Lógica visual para seleccionar tarjetas de bono
+        const cards = document.querySelectorAll('.bonus-card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                cards.forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+                card.querySelector('input').checked = true;
+            });
+        });
+    </script>
+</body>
+</html>

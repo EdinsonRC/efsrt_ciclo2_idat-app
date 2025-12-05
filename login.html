@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Atlantic City</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="row w-100" style="background: black; border-radius: 20px; overflow: hidden; box-shadow: 0 0 30px rgba(0,0,0,0.8);">
+            
+            <div class="col-md-7 p-0 d-none d-md-block">
+                <img src="/img/ruleta-login.png" alt="Casino" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+
+            <div class="col-md-5 p-5 d-flex flex-column justify-content-center text-center">
+                <div class="mb-4">
+                    <h2 style="color: var(--primary-gold); font-family: serif;">ATLANTIC CITY</h2>
+                    <small>CASINO ONLINE</small>
+                </div>
+
+                <h3>Hola!!!<br><strong>Bienvenido</strong></h3>
+
+                <form class="mt-4">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="DNI" style="background: #e0e0e0; color: black; padding: 10px; border-radius: 5px;" >
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="CONTRASEÑA" style="background: #e0e0e0; color: black; padding: 10px; border-radius: 5px;">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-gold mb-2">LOGIN</button>
+                    <a href="#" class="text-white small">¿Olvidaste tu contraseña?</a>
+
+                    <div class="form-check mt-3 text-start">
+                        <input class="form-check-input" type="checkbox" id="terms">
+                        <label class="form-check-label small" for="terms">Acepto los términos y condiciones</label>
+                    </div>
+
+                    <button type="button" class="btn btn-warning mt-3 w-100 fw-bold btn_nuevouser"><a href="/registro-paso1.html">NUEVO USUARIO</a></button>
+                    
+                    <div class="d-grid gap-2 mt-2">
+                        <button class="btn btn-light btn-sm text-start btn_ini_gm" type="button"><img class="google_logo" src="/img/logo_google.png" alt="">Sign in with Google</button>
+                        <button class="btn btn-light btn-sm text-start btn_ini_gm" type="button"><img class="microsoft_logo" src="/img/logo_microsoft.png" alt=""> Sign in with Microsoft</button>
+
+                        <a class="btn_intranet" type="button" href="https://roohass.github.io/AtlanticCityintra/" >Intranet</a>
+
+                        <!-- <button class="btn_intranet" type="button" href="https://roohass.github.io/AtlanticCityintra/" >Intranet</button> -->
+                    </div>
+                    <p class="piegrupo">Diseño y desarrollo Grupo 2 -EFSRT Capa Vista - Idat</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/0178fc0fa8.js" crossorigin="anonymous"></script>
+</body>
+</html>
